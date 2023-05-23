@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Priyanshu - Portfolio</title>
+<script>
+  
+</script>
+  </head>
+  <body class="">
+    <!-- Screen Width on Browser Should Be 80%  -->
+    <header>
+      <nav>
+        <div class="left">Priyanshu 's <span class="purple"> Portfolio </span></div>
+        <div class="right">
+          <ul>
+            <li><a href="\">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="error.html">Services</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          Hi, My Name is <span class="purple">Priyanshu</span>
+          <div>and I am Passionate</div>
+          <span id="element"></span>
+          <div class="button">
+            <button class="btn"><a href = "files/Resume.pdf" download = "Resume">Download Resume </a></button>
+            
+            <button class="btn">
+              <a href="https://github.com/Priyanshu6861/Priyanshu6861" 
+                >Visit Github</a
+              >
+            </button>
+          </div>
+        </div>
+        <div class="rightSection">
+          <img src="image/dev.png" alt="" />
+        </div>
+      </section>
+      <hr />
+      <section class="secondSection">
+        <span class="text-gray">What i have done so far</span>
+        <h1>Work Experience</h1>
+        <div class="box">
+          <div class="vartical">
+            <img class="image-top" src="image/html.png" alt="" />
+            <div class="vertical-title">HTML Developer (2017-2019)</div>
+            <div class="vertical-desc">
+              Gained valuable time-management skills thanks to taking a 2-year course on HTML5 and CSS3 while studying BSc Accounting full-time. 
+            </div>
+          </div>
+          <div class="vartical">
+            <img class="image-top" src="image/php.png" alt="" />
+            <div class="vertical-title">PHP Developer (2019-2021)</div>
+            <div class="vertical-desc">
+            As a PHP developer and have been working in the field since I graduated from my bachelor's degree. As a developer, I have worked on both small and large projects.
+            </div>
+          </div>
+          <div class="vartical">
+            <img class="image-top" src="image/python.png" alt="" />
+            <div class="vertical-title">Python Developer (2021-2022)</div>
+            <div class="vertical-desc">
+              Python Backend Engineer with 6-month of Experience in designing and developing scalable and reliable web applications.
+            </div>
+          </div>
+          <div class="vartical">
+            <img class="image-top" src="image/django.png" alt="" />
+            <div class="vertical-title">Django Developer (2022-2023)</div>
+            <div class="vertical-desc">
+              Django Developer with 8 months of Experience in designing developing and maintaining web applications. Skilled in Building scalable and responsive applications using Django, Python.
+            </div>
+          </div>
+          <div class="vartical">
+            <img class="image-top" src="image/dev1.png" alt="" />
+            <div class="vertical-title">Node.js Developer (2022-2023)</div>
+            <div class="vertical-desc">
+              Highly skilled Node JS Developer with 3 months of experience in optimizing and deploying high-performance applications for e-commerce, healthcare, and financial services industries.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer" >
+        <div class="footer-first" >
+          <h3 >Priyanshu's Developer Portfolio</h3>
+        </div>
+        <div class="footer-second">
+          <ul>
+            <li><a href="\">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="error.html">Services</a></li>
+
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+        <div class="footer-third">
+          <ul>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="microsoft/index.html">Microsoft Clone</a></li>
+            <li><a href="https://github.com/Priyanshu6861/E-Commerce_Django">E-Commerce Website</a></li>
+
+            <li><a href="random/index.html">Clone</a></li>
+          </ul>
+        </div>
+        <div class="footer-fourth">
+          <ul>
+            <li><a href="\">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="error.html">Services</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-rights">
+        Copyright &#169; BHUDEV.com | All rights reserved
+      </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Web Developer",
+          "Photo Editor",
+          "Youtuber ;)",
+          "Web Designer",
+        ],
+        typeSpeed: 100,
+        loop: true, // Add this line to enable looping
+      });
+
+      document.getElementById('download').click();
+
+
+    </script>
+  </body>
+</html>
