@@ -2,6 +2,10 @@
   background-color: rgb(0, 0, 0);
 }
 
+ul{
+  margin-bottom: 0;
+}
+
 .cards {
   display: flex;
 
@@ -13,8 +17,12 @@
   margin: 0 15px;
 }
 
-
 .card-img-top1{
-    height: 305px;
-    width: 286px;
+    height: 240px;
+    width: 240px;
+}
+
+
+.footer-tt{
+  font-size: 1.05rem;
 }

@@ -6,14 +6,14 @@
 
 body {
   background: linear-gradient(90deg, rgb(170, 107, 228) 0%, rgba(12, 7, 66, 0.83) 100%);
+  margin: -20px 0 50px;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  font-family: "Montserrat", sans-serif;
   font-size: 10px;
-  height: 100vh;
-  margin: -20px 0 50px;
+  height: 94vh;
 }
 
 .container {
