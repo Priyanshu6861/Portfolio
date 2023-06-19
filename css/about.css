@@ -538,3 +538,56 @@ footer .footer-rights {
   margin: 0px 10px 0px 0px;
   padding-bottom: 15px;
 }
+
+
+
+@media screen and (max-width: 1000px) {
+  body {
+    min-width: fit-content;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 0 17px;
+  }
+ 
+  footer {
+    width: 110vh;
+  }
+  .footer {
+    padding: 23px 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  footer {
+    width: 61vh;
+  }
+  nav {
+    height: 84px;
+  }
+  nav li {
+    margin: 0 10px;
+  }
+  .footer-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-first h3{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer {
+    width: 75vh;
+  }
+  .footer-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-first h3{
+    font-size: 18px;
+  }
+}

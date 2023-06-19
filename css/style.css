@@ -137,7 +137,7 @@ main hr {
   background-color: white;
   height: 93px;
   width: 1px;
-  margin: 0px 130px;
+  margin: 0px 6vw;
 }
 .secondSection .image-top {
   width: 30px;
@@ -180,6 +180,11 @@ footer {
   text-decoration: none;
   color: white;
 }
+.footer-badges {
+  display: flex;
+  justify-content: space-around;
+  font-size: x-large;
+}
 .btn a {
   text-decoration: none;
   color: white;
@@ -202,7 +207,7 @@ footer .footer-rights {
 }
 
 .bounce-1 {
-  animation-name: bounce-1 ;
+  animation-name: bounce-1;
   animation-timing-function: linear;
 }
 
@@ -215,5 +220,100 @@ footer .footer-rights {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    min-width: fit-content;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 0 17px;
+  }
+  .leftSection {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .rightSection {
+    display: flex;
+    justify-content: center;
+    width: 421px !important;
+  }
+  .rightSection img {
+    width: 45vw;
+    margin-bottom: 73px;
+  }
+  .firstSection {
+    flex-direction: column-reverse;
+  }
+  .secondSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 210vh;
+  }
+  .secondSection .image-top {
+    top: 107px;
+    left: 10px;
+  }
+
+  .box {
+    flex-direction: column;
+  }
+  .secondSection .vartical {
+    height: unset;
+  }
+  .secondSection .box {
+    width: 50vw;
+  }
+  .vertical-title {
+    left: 50px;
+  }
+  .vertical-desc {
+    left: 50px;
+  }
+  footer {
+    width: 110vh;
+  }
+  .footer {
+    padding: 23px 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  footer {
+    width: 61vh;
+  }
+  nav {
+    height: 84px;
+  }
+  nav li {
+    margin: 0 10px;
+  }
+  .footer-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-first h3{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer {
+    width: 75vh;
+  }
+  .footer-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-first h3{
+    font-size: 18px;
   }
 }

@@ -26,3 +26,95 @@ ul{
 .footer-tt{
   font-size: 1.05rem;
 }
+
+
+
+@media screen and (max-width: 1000px) {
+  body {
+    min-width: fit-content;
+  }
+
+  .cards {
+    margin-top: 5%;
+    flex-direction: column;
+    margin-right: 10px;
+    height: 50%;
+    
+  }
+
+  .card {
+    margin: 0px 0px 20px 0px;
+    padding: 20px;
+    width: 40rem!important;
+  }
+  .card1 {
+    margin: 0px 0px 30px 0px;
+    padding: 20px;
+    width: 40rem!important;
+  }
+
+  .card-img-top1{
+    height: auto;
+    width: 100%;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 0 17px;
+  }
+ 
+  footer {
+    width: 110vh;
+  }
+  .footer {
+    padding: 23px 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  footer {
+    width: 61vh;
+  }
+  nav {
+    height: 84px;
+  }
+  nav li {
+    margin: 0 10px;
+  }
+  .footer-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-first h3{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer {
+    width: 75vh;
+  }
+
+   .card {
+    margin: 0px 0px 20px 0px;
+    padding: 20px;
+    width: 25rem!important;
+  }
+  .card1 {
+    margin: 0px 0px 20px 0px;
+    padding: 20px;
+    width: 25rem!important;
+  }
+
+  .footer-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-img-top1{
+    width: 100%;
+  }
+  .footer-first h3{
+    font-size: 18px;
+  }
+}
