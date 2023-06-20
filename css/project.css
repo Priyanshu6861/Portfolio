@@ -334,6 +334,28 @@ ul{
 }
 
 
+@media screen and (max-width: 481px) {
+  footer {
+    width: 64vh!important;
+  }
+  main{
+    margin-top: 10px;
+  }
+  nav {
+    height: 94px;
+  }
+  nav li {
+    margin: 0 12px !important;
+}
+  .footer-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-first h3{
+    font-size: 15px;
+  }
+}
+
 
 @media screen and (max-width: 1000px) {
   body {
@@ -380,27 +402,7 @@ ul{
   }
 }
 
-@media screen and (max-width: 417px) {
-  footer {
-    width: 46vh!important;
-  }
-  main{
-    margin-top: 10px;
-  }
-  nav {
-    height: 84px;
-  }
-  nav li {
-    margin: 0 10px;
-  }
-  .footer-badges {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-first h3{
-    font-size: 15px;
-  }
-}
+
 
 @media screen and (max-width: 600px) {
   footer {

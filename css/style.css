@@ -223,6 +223,43 @@ footer .footer-rights {
   }
 }
 
+@media screen and (max-width: 481px) {
+  nav{
+height: 94px;
+  }
+  footer{
+    width: 66vh;
+  }
+  nav li {
+    margin: 0 4px 4px 15px;
+  }
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+
+  
+
+  footer {
+    width: 61vh;
+  }
+  nav {
+    height: 84px;
+  }
+  nav li {
+    margin: 0 10px;
+  }
+  .footer-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-first h3{
+    font-size: 15px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   body {
     min-width: fit-content;
@@ -287,28 +324,7 @@ footer .footer-rights {
     padding: 23px 10px;
   }
 }
-@media screen and (max-width: 400px) {
 
-
-  
-
-  footer {
-    width: 61vh;
-  }
-  nav {
-    height: 84px;
-  }
-  nav li {
-    margin: 0 10px;
-  }
-  .footer-badges {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-first h3{
-    font-size: 15px;
-  }
-}
 @media screen and (max-width: 600px) {
   footer {
     width: 75vh;
@@ -322,95 +338,6 @@ footer .footer-rights {
   }
 }
 
-/* 
-@media screen and (max-width: 585px) {
-  footer {
-    width: 81vh!important;
-  }
-  main {
-    width: 44vh;
-  }
-  .firstSection {
-    margin: 80px 0px;
-}
-.leftSection {
-  font-size: 2.5rem;
-  align-items: baseline;
-  margin-left: 30vh;
-}
-.rightSection {
-  width: 394px !important;
-}
-.rightSection img {
-  width: 48vw;
-  margin-left: 0vw;
-}
-.leftSection .btn {
-  padding: 8px;
-  font-size: 10px;
-}
-
-.leftSection .button {
-  padding: 48px 0px;
-}
-
-.leftSection .btn {
-  padding: 10px;
-  background-color: #1e2167;
-  border: 2px solid white;
-  border-radius: 6px;
-  font-size: 17px;
-  cursor: pointer;
-  color: white;
-}
-main {
-  width: 80vh;
-}
-
-.secondSection {
-  height: 182vh;
-}
-
-.secondSection .box{
-  width: 32vh;
-  margin:70px 0px 0px 14px;
-}
-
-.vertical-title {
-  left: 60px;
-  top: 18px
-}
-.vertical-desc{
-  left: 60px;
-  top: 19px
-}
-
-.secondSection .image-top {
-  top: 52px;
-  left: 16px;
-}
-
-
-footer{
-  width: 45vh;
-}
-  nav {
-    height: 50px;
-  }
-  nav li {
-    margin: 0 4px 4px 8px;
-  }
-  .footer-badges {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-first h3{
-    font-size: 13px;
-  }
-  .footer li a {
-    font-size: 15px;
-  }
-} */
 
 
 @media screen and (max-width: 417px) {
@@ -483,6 +410,9 @@ footer{
     font-size: 15px;
   }
 }
+
+
+
 
 @media screen and (max-width: 376px) {
 
