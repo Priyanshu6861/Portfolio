@@ -31,12 +31,12 @@ const Navbar = () => {
     if (link.isHash) {
       e.preventDefault();
       // Normalize pathname to check if we are on the home page
-      const currentPath = location.pathname.replace(/\/$/, '') || '/';
+      const currentPath = location.pathname;
       
       if (currentPath !== '/') {
-        navigate(`/#${link.href}`);
+        navigate(`/${link.href.startsWith('#') ? link.href : '#' + link.href}`);
       } else {
-        const element = document.getElementById(link.href);
+        const element = document.getElementById(link.href.replace('#', ''));
         if (element) {
           const headerOffset = 80;
           const elementPosition = element.getBoundingClientRect().top;
@@ -50,6 +50,7 @@ const Navbar = () => {
       }
     }
   };
+
 
 
   return (
