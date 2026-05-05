@@ -8,7 +8,7 @@ const projectsData = [
     id: 1,
     title: 'Shopware 6 Extensions',
     category: 'Shopware',
-    image: '/image/shopware-logo.webp', // Using existing logo as placeholder, or a generic tech image
+    image: 'image/shopware-logo.webp', // Using existing logo as placeholder, or a generic tech image
     description: 'Designed and published multiple custom Shopware 6 extensions including Product Variants Matrix, Advanced Import, Tax Switcher, and Swish Payments.',
     tech: ['Shopware 6', 'PHP', 'MySQL', 'Vue.js'],
     github: null,
@@ -19,7 +19,7 @@ const projectsData = [
     id: 2,
     title: 'E-Commerce Website',
     category: 'Full Stack',
-    image: '/image/project/e-commerce.png',
+    image: 'image/project/e-commerce.png',
     description: 'Built a full-stack e-commerce application with secure checkout, shopping cart logic, and payment gateway integration.',
     tech: ['Python', 'Django', 'HTML/CSS', 'JavaScript'],
     github: 'https://github.com/Priyanshu6861/E-Commerce_Django',
@@ -30,7 +30,7 @@ const projectsData = [
     id: 3,
     title: 'Real Estate Broker System',
     category: 'Backend',
-    image: '/image/project/real-estate.jpg',
+    image: 'image/project/real-estate.jpg',
     description: 'Online Real Estate Broker System using Core PHP. Handles property listings, broker-client communications, and secure online payments.',
     tech: ['Core PHP', 'MySQL', 'Bootstrap'],
     github: 'https://github.com/Priyanshu6861/Real-Estate-PHP',
@@ -41,33 +41,33 @@ const projectsData = [
     id: 4,
     title: 'Netflix Clone',
     category: 'Frontend',
-    image: '/image/project/netflix.png',
+    image: 'image/project/netflix.png',
     description: 'A responsive frontend clone of the Netflix interface built to demonstrate UI/UX skills and modern CSS frameworks.',
     tech: ['HTML', 'Tailwind CSS'],
     github: null,
-    demo: '/netflix/index.html',
+    demo: 'netflix/index.html',
     featured: false
   },
   {
     id: 5,
     title: 'Microsoft Clone',
     category: 'Frontend',
-    image: '/image/project/microsoft.png',
+    image: 'image/project/microsoft.png',
     description: 'A simplified frontend clone of the Microsoft landing page focusing on responsive design.',
     tech: ['HTML', 'Tailwind CSS'],
     github: null,
-    demo: '/microsoft/index.html',
+    demo: 'microsoft/index.html',
     featured: false
   },
   {
     id: 6,
     title: 'Facebook Clone',
     category: 'Frontend',
-    image: '/image/project/facebook1.jpg',
+    image: 'image/project/facebook1.jpg',
     description: 'A replica of the Facebook login page, created with Tailwind CSS.',
     tech: ['HTML', 'Tailwind CSS'],
     github: null,
-    demo: '/facebook_login/index.html',
+    demo: 'facebook_login/index.html',
     featured: false
   }
 ];

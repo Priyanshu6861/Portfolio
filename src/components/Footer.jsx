@@ -36,10 +36,10 @@ const Footer = () => {
           <div className="footer-links-group">
             <h4>Old Projects</h4>
             <ul>
-              <li><a href="/old_index.html">Classic Portfolio</a></li>
-              <li><a href="/links.html">Social QR</a></li>
-              <li><a href="/netflix/index.html">Netflix Clone</a></li>
-              <li><a href="/microsoft/index.html">Microsoft Clone</a></li>
+              <li><a href="old_index.html">Classic Portfolio</a></li>
+              <li><a href="links.html">Social QR</a></li>
+              <li><a href="netflix/index.html">Netflix Clone</a></li>
+              <li><a href="microsoft/index.html">Microsoft Clone</a></li>
             </ul>
           </div>
         </div>

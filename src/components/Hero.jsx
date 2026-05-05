@@ -65,7 +65,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className="hero-image-glow"></div>
-          <img src="/image/my.jpg" alt="Priyanshu Joshi" className="hero-image" />
+          <img src="image/my.jpg" alt="Priyanshu Joshi" className="hero-image" />
         </motion.div>
       </div>
     </section>
