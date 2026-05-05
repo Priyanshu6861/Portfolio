@@ -111,19 +111,17 @@ const Projects = () => {
                 className="project-card glass"
               >
                 <div className="project-image-container">
-                  <img src={project.image} alt={project.title} className="project-image" />
+                  <img src={`${import.meta.env.BASE_URL}${project.image}`} alt={project.title} className="project-image" />
                   <div className="project-overlay">
                     <div className="project-links">
-                      {project.github && (
-                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-icon-link" title="Source Code">
+                      {project.github && project.github !== '#' && (
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-icon-link" title="GitHub">
                           <Github size={20} />
                         </a>
                       )}
-                      {project.demo && (
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-icon-link" title="Live Demo">
-                          <ExternalLink size={20} />
-                        </a>
-                      )}
+                      <a href={project.demo} target={project.demo.startsWith('/') ? '_self' : '_blank'} rel="noopener noreferrer" className="project-icon-link" title="Live Demo">
+                        <ExternalLink size={20} />
+                      </a>
                     </div>
                   </div>
                 </div>

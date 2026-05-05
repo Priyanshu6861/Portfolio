@@ -37,10 +37,11 @@ const Hero = () => {
 
           
           <div className="hero-socials">
-            <a href="files/Resume.pdf" target="_blank" rel="noopener noreferrer" className="social-link" title="Download Resume">
+            <a href={`${import.meta.env.BASE_URL}files/Resume.pdf`} target="_blank" rel="noopener noreferrer" className="social-link" title="Download Resume">
               <FileText size={20} />
               <span>Resume</span>
             </a>
+
             <a href="https://github.com/Priyanshu6861" target="_blank" rel="noopener noreferrer" className="social-link" title="GitHub">
               <Github size={20} />
               <span>GitHub</span>
@@ -66,8 +67,9 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className="hero-image-glow"></div>
-          <img src="image/my.jpg" alt="Priyanshu Joshi" className="hero-image" />
+          <img src={`${import.meta.env.BASE_URL}image/my.jpg`} alt="Priyanshu Joshi" className="hero-image" />
         </motion.div>
+
       </div>
     </section>
   );
