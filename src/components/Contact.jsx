@@ -59,7 +59,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4>Location</h4>
-                  <span>India</span>
+                  <span>Ahmedabad, India</span>
+
                 </div>
               </div>
             </div>

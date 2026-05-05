@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Code2 } from 'lucide-react';
+
 import './Projects.css';
 
 const projectsData = [
@@ -23,7 +25,7 @@ const projectsData = [
     description: 'Full-stack platform with secure checkout, complex cart logic, and automated payment integrations.',
     tech: ['React', 'Node.js', 'MongoDB', 'Express'],
     github: 'https://github.com/Priyanshu6861/E-Commerce_Django',
-    demo: '#',
+    demo: 'https://github.com/Priyanshu6861/E-Commerce_Django',
     featured: true
   },
   {
@@ -34,9 +36,10 @@ const projectsData = [
     description: 'Centralized property listing and broker-client communication platform with secure transactions.',
     tech: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
     github: 'https://github.com/Priyanshu6861/Real-Estate-PHP',
-    demo: '#',
+    demo: 'https://github.com/Priyanshu6861/Real-Estate-PHP',
     featured: true
   },
+
   {
     id: 4,
     title: 'Streaming Platform UI',
@@ -44,8 +47,8 @@ const projectsData = [
     image: 'image/project/netflix.png',
     description: 'High-fidelity streaming interface inspired by Netflix, focusing on performance and responsive design.',
     tech: ['React', 'Tailwind CSS', 'Framer Motion'],
-    github: '#',
-    demo: '#',
+    github: null,
+    demo: `${import.meta.env.BASE_URL}netflix/index.html`,
     featured: false
   },
   {
@@ -55,8 +58,8 @@ const projectsData = [
     image: 'image/project/microsoft.png',
     description: 'Professional corporate landing page redesign with a focus on accessibility and modern aesthetics.',
     tech: ['HTML', 'Tailwind CSS', 'JavaScript'],
-    github: '#',
-    demo: '#',
+    github: null,
+    demo: `${import.meta.env.BASE_URL}microsoft/index.html`,
     featured: false
   },
   {
@@ -66,11 +69,23 @@ const projectsData = [
     image: 'image/project/facebook1.jpg',
     description: 'Modern social media interface with dynamic components and real-time interaction simulations.',
     tech: ['React', 'CSS Modules', 'Redux'],
-    github: '#',
-    demo: '#',
+    github: null,
+    demo: `${import.meta.env.BASE_URL}facebook_login/index.html`,
+    featured: false
+  },
+  {
+    id: 7,
+    title: 'Utility Dashboard',
+    category: 'Frontend',
+    image: 'image/project/real-estate.jpg',
+    description: 'A collection of useful mini-utilities and random tool implementations for daily developer tasks.',
+    tech: ['JavaScript', 'HTML', 'CSS'],
+    github: null,
+    demo: `${import.meta.env.BASE_URL}random/index.html`,
     featured: false
   }
 ];
+
 
 const Projects = () => {
   const [filter, setFilter] = useState('All');
@@ -119,9 +134,15 @@ const Projects = () => {
                           <Github size={20} />
                         </a>
                       )}
-                      <a href={project.demo} target={project.demo.startsWith('/') ? '_self' : '_blank'} rel="noopener noreferrer" className="project-icon-link" title="Live Demo">
-                        <ExternalLink size={20} />
-                      </a>
+                      {project.demo.startsWith('http') || project.demo.endsWith('.html') ? (
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-icon-link" title="Live Demo">
+                          <ExternalLink size={20} />
+                        </a>
+                      ) : (
+                        <Link to={project.demo} className="project-icon-link" title="View Details">
+                          <ExternalLink size={20} />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -143,17 +164,22 @@ const Projects = () => {
                   </div>
 
                   <div className="project-footer">
-                     {project.github && (
+                      {project.github && project.github !== '#' && (
                         <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn-small">
                           <Github size={16} /> Code
                         </a>
                       )}
-                      {project.demo && (
+                      {project.demo.startsWith('http') || project.demo.endsWith('.html') ? (
                         <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn-small btn-primary-small">
                           <ExternalLink size={16} /> Demo
                         </a>
+                      ) : (
+                        <Link to={project.demo} className="btn-small btn-primary-small">
+                          <ExternalLink size={16} /> View Work
+                        </Link>
                       )}
                   </div>
+
                 </div>
               </motion.div>
             ))}
