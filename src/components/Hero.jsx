@@ -19,21 +19,22 @@ const Hero = () => {
           </div>
           
           <h1 className="hero-title">
-            I build <span className="text-gradient">high-performance</span> web apps that scale your business
+            Software Developer building <span className="text-gradient">scalable</span> and user-focused web applications
           </h1>
           
           <p className="hero-subtitle">
-            Hi, I'm Priyanshu. A specialized Shopware, Odoo & Full-Stack Developer dedicated to engineering robust solutions, complex migrations, and automated systems that drive real business value.
+            I'm Priyanshu Joshi, a Software Developer at Brainstream Technolabs. I specialize in engineering robust e-commerce solutions, building high-performance React applications, and solving complex architectural challenges through clean, efficient code.
           </p>
           
           <div className="hero-actions">
-            <a href="#contact" className="btn btn-primary">
-              Hire Me <ArrowRight size={20} />
+            <a href="#projects" className="btn btn-primary">
+              View Projects <ArrowRight size={20} />
             </a>
-            <a href="#projects" className="btn btn-outline">
-              View Projects
+            <a href="#contact" className="btn btn-outline">
+              Contact Me
             </a>
           </div>
+
           
           <div className="hero-socials">
             <a href="files/Resume.pdf" target="_blank" rel="noopener noreferrer" className="social-link" title="Download Resume">

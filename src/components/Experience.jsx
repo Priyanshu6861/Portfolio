@@ -6,26 +6,34 @@ import './Experience.css';
 const experiences = [
   {
     id: 1,
-    role: 'Shopware Developer',
-    company: 'Dolphin Web Solutions',
-    period: '2024 - 2026',
-    description: 'Designed and published multiple custom Shopware 6 extensions including Product Variants Matrix, Advanced Import, Tax Switcher, and Swish Payments. Developed the Product Question and FAQ extension live on Shopware Store.',
+    role: 'Software Developer',
+    company: 'Brainstream Technolabs Private Limited',
+    period: 'March 2026 – Present',
+    description: 'Contributing to high-impact software products, specializing in both frontend and backend development. Focusing on API integrations, system performance optimization, and implementing scalable features for international e-commerce clients.',
+    bullets: [
+      'Engineered and maintained core features using React and Node.js.',
+      'Optimized application performance, reducing load times by 40%.',
+      'Developed and integrated complex RESTful APIs for seamless data synchronization.',
+      'Collaborated with cross-functional teams to deliver production-ready code on tight schedules.',
+      'Identified and resolved critical bugs in legacy systems, improving overall stability.'
+    ]
   },
   {
     id: 2,
-    role: 'Backend & Co-Developer',
-    company: 'Real Estate Broker System',
-    period: 'Feb 2022 – March 2024',
-    description: 'Developed custom real estate platform using Core PHP for property listings and broker-client communications. Integrated secure online payment gateways.',
+    role: 'Shopware Developer',
+    company: 'Dolphin Web Solutions',
+    period: '2024 - 2026',
+    description: 'Designed and published multiple custom Shopware 6 extensions. Developed the Product Question and FAQ extension live on the Shopware Store.',
   },
   {
     id: 3,
-    role: 'Full Stack Developer',
-    company: 'E-Commerce Website',
-    period: 'June 2021 – Sep 2021',
-    description: 'Built full-stack e-commerce application using Python and Django featuring secure checkout, shopping cart logic, and payment gateway integration.',
+    role: 'Backend & Co-Developer',
+    company: 'Real Estate Broker System',
+    period: 'Feb 2022 – March 2024',
+    description: 'Developed custom real estate platform using Core PHP for property listings and broker-client communications.',
   }
 ];
+
 
 const Experience = () => {
   return (
@@ -58,6 +66,14 @@ const Experience = () => {
                     {exp.company}
                   </h4>
                   <p className="exp-desc">{exp.description}</p>
+                  {exp.bullets && (
+                    <ul className="exp-bullets">
+                      {exp.bullets.map((bullet, idx) => (
+                        <li key={idx}>{bullet}</li>
+                      ))}
+                    </ul>
+                  )}
+
                 </div>
               </motion.div>
             ))}

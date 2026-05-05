@@ -6,68 +6,68 @@ import './Projects.css';
 const projectsData = [
   {
     id: 1,
-    title: 'Shopware 6 Extensions',
+    title: 'Professional Shopware Extensions',
     category: 'Shopware',
-    image: 'image/shopware-logo.webp', // Using existing logo as placeholder, or a generic tech image
-    description: 'Designed and published multiple custom Shopware 6 extensions including Product Variants Matrix, Advanced Import, Tax Switcher, and Swish Payments.',
-    tech: ['Shopware 6', 'PHP', 'MySQL', 'Vue.js'],
+    image: 'image/shopware-logo.webp',
+    description: 'A suite of custom Shopware 6 extensions including Product Variants Matrix and Advanced Import tools.',
+    tech: ['Shopware 6', 'PHP', 'Vue.js', 'Symfony'],
     github: null,
-    demo: '#',
+    demo: '/work',
     featured: true
   },
   {
     id: 2,
-    title: 'E-Commerce Website',
+    title: 'E-Commerce Ecosystem',
     category: 'Full Stack',
     image: 'image/project/e-commerce.png',
-    description: 'Built a full-stack e-commerce application with secure checkout, shopping cart logic, and payment gateway integration.',
-    tech: ['Python', 'Django', 'HTML/CSS', 'JavaScript'],
+    description: 'Full-stack platform with secure checkout, complex cart logic, and automated payment integrations.',
+    tech: ['React', 'Node.js', 'MongoDB', 'Express'],
     github: 'https://github.com/Priyanshu6861/E-Commerce_Django',
-    demo: null,
+    demo: '#',
     featured: true
   },
   {
     id: 3,
-    title: 'Real Estate Broker System',
+    title: 'Real Estate Management System',
     category: 'Backend',
     image: 'image/project/real-estate.jpg',
-    description: 'Online Real Estate Broker System using Core PHP. Handles property listings, broker-client communications, and secure online payments.',
-    tech: ['Core PHP', 'MySQL', 'Bootstrap'],
+    description: 'Centralized property listing and broker-client communication platform with secure transactions.',
+    tech: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
     github: 'https://github.com/Priyanshu6861/Real-Estate-PHP',
-    demo: null,
+    demo: '#',
     featured: true
   },
   {
     id: 4,
-    title: 'Netflix Clone',
+    title: 'Streaming Platform UI',
     category: 'Frontend',
     image: 'image/project/netflix.png',
-    description: 'A responsive frontend clone of the Netflix interface built to demonstrate UI/UX skills and modern CSS frameworks.',
-    tech: ['HTML', 'Tailwind CSS'],
-    github: null,
-    demo: 'netflix/index.html',
+    description: 'High-fidelity streaming interface inspired by Netflix, focusing on performance and responsive design.',
+    tech: ['React', 'Tailwind CSS', 'Framer Motion'],
+    github: '#',
+    demo: '#',
     featured: false
   },
   {
     id: 5,
-    title: 'Microsoft Clone',
+    title: 'Corporate Landing Page UI',
     category: 'Frontend',
     image: 'image/project/microsoft.png',
-    description: 'A simplified frontend clone of the Microsoft landing page focusing on responsive design.',
-    tech: ['HTML', 'Tailwind CSS'],
-    github: null,
-    demo: 'microsoft/index.html',
+    description: 'Professional corporate landing page redesign with a focus on accessibility and modern aesthetics.',
+    tech: ['HTML', 'Tailwind CSS', 'JavaScript'],
+    github: '#',
+    demo: '#',
     featured: false
   },
   {
     id: 6,
-    title: 'Facebook Clone',
+    title: 'Social Media Web App',
     category: 'Frontend',
     image: 'image/project/facebook1.jpg',
-    description: 'A replica of the Facebook login page, created with Tailwind CSS.',
-    tech: ['HTML', 'Tailwind CSS'],
-    github: null,
-    demo: 'facebook_login/index.html',
+    description: 'Modern social media interface with dynamic components and real-time interaction simulations.',
+    tech: ['React', 'CSS Modules', 'Redux'],
+    github: '#',
+    demo: '#',
     featured: false
   }
 ];
@@ -84,7 +84,7 @@ const Projects = () => {
   return (
     <section className="projects" id="projects">
       <div className="container">
-        <h2 className="section-title">Featured <span className="text-gradient">Projects</span></h2>
+        <h2 className="section-title">Professional <span className="text-gradient">Projects</span></h2>
         
         <div className="project-filters">
           {categories.map(category => (
@@ -99,15 +99,15 @@ const Projects = () => {
         </div>
         
         <motion.div layout className="projects-grid">
-          <AnimatePresence>
+          <AnimatePresence mode='popLayout'>
             {filteredProjects.map((project) => (
               <motion.div 
                 key={project.id}
                 layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.4 }}
                 className="project-card glass"
               >
                 <div className="project-image-container">
@@ -115,13 +115,13 @@ const Projects = () => {
                   <div className="project-overlay">
                     <div className="project-links">
                       {project.github && (
-                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-icon-link">
-                          <Github size={24} />
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-icon-link" title="Source Code">
+                          <Github size={20} />
                         </a>
                       )}
                       {project.demo && (
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-icon-link">
-                          <ExternalLink size={24} />
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-icon-link" title="Live Demo">
+                          <ExternalLink size={20} />
                         </a>
                       )}
                     </div>
@@ -129,17 +129,32 @@ const Projects = () => {
                 </div>
                 
                 <div className="project-content">
-                  <div className="project-category">
-                    <Code2 size={16} className="text-gradient" />
-                    <span>{project.category}</span>
+                  <div className="project-header">
+                    <div className="project-category-tag">
+                      <Code2 size={14} className="text-gradient" />
+                      <span>{project.category}</span>
+                    </div>
                   </div>
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-desc">{project.description}</p>
                   
                   <div className="project-tech">
                     {project.tech.map(tech => (
-                      <span key={tech} className="tech-tag">{tech}</span>
+                      <span key={tech} className="tech-badge">{tech}</span>
                     ))}
+                  </div>
+
+                  <div className="project-footer">
+                     {project.github && (
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn-small">
+                          <Github size={16} /> Code
+                        </a>
+                      )}
+                      {project.demo && (
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn-small btn-primary-small">
+                          <ExternalLink size={16} /> Demo
+                        </a>
+                      )}
                   </div>
                 </div>
               </motion.div>
@@ -150,5 +165,6 @@ const Projects = () => {
     </section>
   );
 };
+
 
 export default Projects;

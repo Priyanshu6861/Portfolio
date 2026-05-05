@@ -140,6 +140,25 @@ section {
   outline-offset: 2px;
 }
 
+.tech-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  border: 1px solid var(--glass-border);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: var(--accent-gradient);
+  color: white;
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+
 @media (max-width: 768px) {
   :root {
     --section-padding: 4rem 1rem;

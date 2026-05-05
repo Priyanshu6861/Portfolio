@@ -8,33 +8,31 @@ const skillCategories = [
     title: 'Frontend Development',
     icon: <LayoutTemplate size={24} />,
     skills: [
-      { name: 'Vue.js', level: 85 },
-      { name: 'React', level: 75 },
-      { name: 'Tailwind CSS', level: 90 },
-      { name: 'HTML5/CSS3', level: 95 },
-      { name: 'JavaScript (ES6+)', level: 85 },
+      { name: 'React', level: 90 },
+      { name: 'JavaScript (ES6+)', level: 95 },
+      { name: 'HTML5 / CSS3', level: 98 },
+      { name: 'Tailwind CSS', level: 92 },
+      { name: 'Vue.js', level: 85 }
     ]
   },
   {
-    title: 'Backend & E-Commerce',
+    title: 'Backend & Core',
     icon: <Server size={24} />,
     skills: [
-      { name: 'Shopware 6', level: 95 },
-      { name: 'PHP (Core/OOP)', level: 90 },
-      { name: 'Python / Django', level: 80 },
-      { name: 'REST APIs', level: 90 },
-      { name: 'Cron Jobs/Automation', level: 85 },
+      { name: 'Node.js', level: 88 },
+      { name: 'Java', level: 85 },
+      { name: 'PHP / Shopware', level: 92 },
+      { name: 'REST APIs', level: 95 }
     ]
   },
   {
-    title: 'Tools & Database',
+    title: 'Database & Tools',
     icon: <Database size={24} />,
     skills: [
       { name: 'MySQL', level: 90 },
-      { name: 'Git & GitHub', level: 85 },
-      { name: 'ERP Integration', level: 80 },
-      { name: 'Data Migration', level: 85 },
-      { name: 'Server Deployment', level: 75 },
+      { name: 'MongoDB', level: 85 },
+      { name: 'Git / GitHub', level: 95 },
+      { name: 'Docker', level: 80 }
     ]
   }
 ];
@@ -43,7 +41,7 @@ const Skills = () => {
   return (
     <section className="skills" id="skills">
       <div className="container">
-        <h2 className="section-title">Technical <span className="text-gradient">Proficiency</span></h2>
+        <h2 className="section-title">Technical <span className="text-gradient">Stack</span></h2>
         
         <div className="skills-grid">
           {skillCategories.map((category, index) => (
@@ -66,8 +64,8 @@ const Skills = () => {
                 {category.skills.map(skill => (
                   <div key={skill.name} className="skill-item">
                     <div className="skill-info">
-                      <span className="skill-name">{skill.name}</span>
-                      <span className="skill-percent">{skill.level}%</span>
+                      <span>{skill.name}</span>
+                      <span>{skill.level}%</span>
                     </div>
                     <div className="skill-bar-bg">
                       <motion.div 
@@ -75,8 +73,8 @@ const Skills = () => {
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
                         viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.2 + (index * 0.1) }}
-                      ></motion.div>
+                        transition={{ duration: 1, delay: 0.5 + (index * 0.1) }}
+                      />
                     </div>
                   </div>
                 ))}
@@ -88,5 +86,7 @@ const Skills = () => {
     </section>
   );
 };
+
+
 
 export default Skills;

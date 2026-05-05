@@ -36,8 +36,8 @@ const Contact = () => {
           >
             <h3>Let's build something great together</h3>
             <p>
-              I'm currently available for freelance projects and full-time opportunities. 
-              Whether you have a question or just want to say hi, I'll try my best to get back to you!
+              I'm currently focused on developing high-performance web applications at Brainstream Technolabs. 
+              If you have a challenging project or just want to discuss modern web technologies, feel free to reach out.
             </p>
             
             <div className="contact-methods">
@@ -47,9 +47,11 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4>Email Me</h4>
-                  <a href="mailto:hello@example.com">hello@example.com</a>
+                  <a href="mailto:priyanshujoshi2252@gmail.com">priyanshujoshi2252@gmail.com</a>
+
                 </div>
               </div>
+
               
               <div className="contact-method">
                 <div className="contact-icon glass">

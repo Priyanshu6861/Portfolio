@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,29 +19,71 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
+    { name: 'Home', href: '/', isHash: false },
+    { name: 'Work', href: '/work', isHash: false },
+    { name: 'Experience', href: 'experience', isHash: true },
+    { name: 'Projects', href: 'projects', isHash: true },
+    { name: 'Skills', href: 'skills', isHash: true },
   ];
+
+  const handleNavClick = (e, link) => {
+    setIsOpen(false);
+    if (link.isHash) {
+      e.preventDefault();
+      // Normalize pathname to check if we are on the home page
+      const currentPath = location.pathname.replace(/\/$/, '') || '/';
+      
+      if (currentPath !== '/') {
+        navigate(`/#${link.href}`);
+      } else {
+        const element = document.getElementById(link.href);
+        if (element) {
+          const headerOffset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+  };
+
 
   return (
     <header className={`navbar ${scrolled ? 'scrolled glass' : ''}`}>
       <div className="container nav-container">
-        <a href="#" className="logo">
+        <Link to="/" className="logo">
           Priyanshu<span className="text-gradient">.dev</span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="desktop-nav">
           <ul className="nav-links">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <a href={link.href}>{link.name}</a>
+                {link.isHash ? (
+                  <a 
+                    href={`#${link.href}`}
+                    onClick={(e) => handleNavClick(e, link)}
+                    className={location.pathname === '/' ? 'nav-item' : 'nav-item'}
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <Link 
+                    to={link.href} 
+                    className={location.pathname === link.href ? 'nav-item active-link' : 'nav-item'}
+                  >
+                    {link.name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
-          <a href="#contact" className="btn btn-primary">Let's Talk</a>
+          <a href="#contact" className="btn btn-primary" onClick={(e) => handleNavClick(e, { href: 'contact', isHash: true })}>Let's Talk</a>
         </nav>
 
         {/* Mobile Toggle */}
@@ -48,27 +93,35 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Nav */}
-      {isOpen && (
-        <motion.nav 
-          className="mobile-nav glass"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-        >
-          <ul className="mobile-nav-links">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <a href={link.href} onClick={() => setIsOpen(false)}>{link.name}</a>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.nav 
+            className="mobile-nav glass"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+          >
+            <ul className="mobile-nav-links">
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  {link.isHash ? (
+                    <a href={`#${link.href}`} onClick={(e) => handleNavClick(e, link)}>{link.name}</a>
+                  ) : (
+                    <Link to={link.href} onClick={(e) => handleNavClick(e, link)}>{link.name}</Link>
+                  )}
+                </li>
+              ))}
+              <li>
+                <a href="#contact" className="btn btn-primary" onClick={(e) => handleNavClick(e, { href: 'contact', isHash: true })}>Let's Talk</a>
               </li>
-            ))}
-            <li>
-              <a href="#contact" className="btn btn-primary" onClick={() => setIsOpen(false)}>Let's Talk</a>
-            </li>
-          </ul>
-        </motion.nav>
-      )}
+            </ul>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </header>
   );
+
 };
 
 export default Navbar;
+

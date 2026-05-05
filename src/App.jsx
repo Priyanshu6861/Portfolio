@@ -1,22 +1,21 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import ProfessionalWork from './pages/ProfessionalWork';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div className="app">
+      <ScrollToTop />
       <Navbar />
       <main>
-        <Hero />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/work" element={<ProfessionalWork />} />
+        </Routes>
       </main>
       <Footer />
     </div>
@@ -24,3 +23,4 @@ function App() {
 }
 
 export default App;
+
