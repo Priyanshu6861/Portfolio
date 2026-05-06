@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Send, Github, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Send, Github, BriefcaseBusiness } from 'lucide-react';
 import './Contact.css';
 
 const Contact = () => {
@@ -36,8 +36,7 @@ const Contact = () => {
           >
             <h3>Let's build something great together</h3>
             <p>
-              I'm currently focused on developing high-performance web applications at Brainstream Technolabs. 
-              If you have a challenging project or just want to discuss modern web technologies, feel free to reach out.
+              Need a Shopware plugin, Odoo sync, payment integration, or performance pass for an e-commerce store? Send the details and I will get back with a practical next step.
             </p>
             
             <div className="contact-methods">
@@ -52,6 +51,15 @@ const Contact = () => {
                 </div>
               </div>
 
+              <div className="contact-method">
+                <div className="contact-icon glass">
+                  <BriefcaseBusiness size={24} className="text-gradient" />
+                </div>
+                <div>
+                  <h4>Best Fit</h4>
+                  <span>Shopware, PHP, APIs, Odoo, e-commerce</span>
+                </div>
+              </div>
               
               <div className="contact-method">
                 <div className="contact-icon glass">
@@ -69,9 +77,8 @@ const Contact = () => {
               <a href="https://github.com/Priyanshu6861" target="_blank" rel="noopener noreferrer" className="social-icon glass">
                 <Github size={20} />
               </a>
-              {/* Assuming LinkedIn might be available, otherwise it can be removed */}
-              <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon glass">
-                <Linkedin size={20} />
+              <a href="mailto:priyanshujoshi2252@gmail.com" className="social-icon glass">
+                <Mail size={20} />
               </a>
             </div>
           </motion.div>

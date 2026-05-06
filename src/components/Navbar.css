@@ -32,12 +32,12 @@
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.25rem;
 }
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1.25rem;
 }
 
 .nav-links a {
@@ -67,6 +67,10 @@
 .mobile-toggle {
   display: none;
   color: var(--text-primary);
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-nav {
@@ -97,12 +101,16 @@
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 0;
+  }
+
   .desktop-nav {
     display: none;
   }
   
   .mobile-toggle {
-    display: block;
+    display: inline-flex;
   }
   
   .mobile-nav {

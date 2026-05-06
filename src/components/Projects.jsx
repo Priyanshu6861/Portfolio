@@ -11,8 +11,8 @@ const projectsData = [
     title: 'Professional Shopware Extensions',
     category: 'Shopware',
     image: 'image/shopware-logo.webp',
-    description: 'A suite of custom Shopware 6 extensions including Product Variants Matrix and Advanced Import tools.',
-    tech: ['Shopware 6', 'PHP', 'Vue.js', 'Symfony'],
+    description: 'Custom Shopware 6 extensions for storefront, admin, catalog, and integration workflows built for real merchant operations.',
+    tech: ['Shopware 6', 'PHP', 'Symfony', 'Vue.js', 'APIs'],
     github: null,
     demo: '/work',
     featured: true
@@ -22,8 +22,8 @@ const projectsData = [
     title: 'E-Commerce Ecosystem',
     category: 'Full Stack',
     image: 'image/project/e-commerce.png',
-    description: 'Full-stack platform with secure checkout, complex cart logic, and automated payment integrations.',
-    tech: ['React', 'Node.js', 'MongoDB', 'Express'],
+    description: 'Commerce platform concept with catalog browsing, cart flow, customer journeys, and backend-driven product management.',
+    tech: ['Python', 'Django', 'HTML', 'CSS', 'MySQL'],
     github: 'https://github.com/Priyanshu6861/E-Commerce_Django',
     demo: 'https://github.com/Priyanshu6861/E-Commerce_Django',
     featured: true
@@ -33,7 +33,7 @@ const projectsData = [
     title: 'Real Estate Management System',
     category: 'Backend',
     image: 'image/project/real-estate.jpg',
-    description: 'Centralized property listing and broker-client communication platform with secure transactions.',
+    description: 'Core PHP property management platform for listings, inquiries, broker workflows, and admin-controlled data.',
     tech: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
     github: 'https://github.com/Priyanshu6861/Real-Estate-PHP',
     demo: 'https://github.com/Priyanshu6861/Real-Estate-PHP',
@@ -45,9 +45,9 @@ const projectsData = [
     title: 'Streaming Platform UI',
     category: 'Frontend',
     image: 'image/project/netflix.png',
-    description: 'High-fidelity streaming interface inspired by Netflix, focusing on performance and responsive design.',
-    tech: ['React', 'Tailwind CSS', 'Framer Motion'],
-    github: null,
+    description: 'Responsive streaming landing page with bold content sections, conversion-focused CTA blocks, and mobile cleanup.',
+    tech: ['HTML', 'Tailwind CSS', 'Responsive UI'],
+    github: 'https://github.com/Priyanshu6861/Portfolio/tree/main/public/netflix',
     demo: `${import.meta.env.BASE_URL}netflix/index.html`,
     featured: false
   },
@@ -56,9 +56,9 @@ const projectsData = [
     title: 'Corporate Landing Page UI',
     category: 'Frontend',
     image: 'image/project/microsoft.png',
-    description: 'Professional corporate landing page redesign with a focus on accessibility and modern aesthetics.',
+    description: 'Microsoft-inspired product page with responsive navigation, product highlights, and improved content stacking.',
     tech: ['HTML', 'Tailwind CSS', 'JavaScript'],
-    github: null,
+    github: 'https://github.com/Priyanshu6861/Portfolio/tree/main/public/microsoft',
     demo: `${import.meta.env.BASE_URL}microsoft/index.html`,
     featured: false
   },
@@ -67,20 +67,20 @@ const projectsData = [
     title: 'Social Media Web App',
     category: 'Frontend',
     image: 'image/project/facebook1.jpg',
-    description: 'Modern social media interface with dynamic components and real-time interaction simulations.',
-    tech: ['React', 'CSS Modules', 'Redux'],
-    github: null,
+    description: 'Facebook-style authentication screen with responsive spacing, accessible form fields, and mobile-first layout fixes.',
+    tech: ['HTML', 'Tailwind CSS', 'Forms'],
+    github: 'https://github.com/Priyanshu6861/Portfolio/tree/main/public/facebook_login',
     demo: `${import.meta.env.BASE_URL}facebook_login/index.html`,
     featured: false
   },
   {
     id: 7,
-    title: 'Utility Dashboard',
+    title: 'Game Store Landing Page',
     category: 'Frontend',
-    image: 'image/project/real-estate.jpg',
-    description: 'A collection of useful mini-utilities and random tool implementations for daily developer tasks.',
-    tech: ['JavaScript', 'HTML', 'CSS'],
-    github: null,
+    image: 'image/project/gaming.png',
+    description: 'Responsive gaming shop landing page with a clear hero, product navigation, and polished mobile stacking.',
+    tech: ['HTML', 'Tailwind CSS', 'Landing Page'],
+    github: 'https://github.com/Priyanshu6861/Portfolio/tree/main/public/random',
     demo: `${import.meta.env.BASE_URL}random/index.html`,
     featured: false
   }
@@ -166,16 +166,16 @@ const Projects = () => {
                   <div className="project-footer">
                       {project.github && project.github !== '#' && (
                         <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn-small">
-                          <Github size={16} /> Code
+                          <Github size={16} /> GitHub
                         </a>
                       )}
                       {project.demo.startsWith('http') || project.demo.endsWith('.html') ? (
                         <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn-small btn-primary-small">
-                          <ExternalLink size={16} /> Demo
+                          <ExternalLink size={16} /> Live Demo
                         </a>
                       ) : (
                         <Link to={project.demo} className="btn-small btn-primary-small">
-                          <ExternalLink size={16} /> View Work
+                          <ExternalLink size={16} /> Case Study
                         </Link>
                       )}
                   </div>

@@ -3,9 +3,10 @@
   --bg-primary: #0a0a0a;
   --bg-secondary: #121212;
   --text-primary: #ffffff;
-  --text-secondary: #a3a3a3;
-  --accent-primary: #8b5cf6; /* Purple */
-  --accent-secondary: #3b82f6; /* Blue */
+  --text-secondary: #b0b8c3;
+  --accent-primary: #0ea5e9;
+  --accent-secondary: #22c55e;
+  --accent-warm: #f59e0b;
   --accent-gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.08);
@@ -29,6 +30,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 96px;
 }
 
 body {
@@ -98,7 +100,7 @@ section {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 /* Buttons */
@@ -120,7 +122,7 @@ section {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 10px 20px rgba(14, 165, 233, 0.25);
 }
 
 .btn-outline {
@@ -169,5 +171,20 @@ section {
   .section-title {
     font-size: 2rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

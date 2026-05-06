@@ -1,14 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Github, Mail, ArrowUp } from 'lucide-react';
+import { navigateToHomeSection } from '../utils/scrollToSection';
 import './Footer.css';
 
 const Footer = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
+  };
+
+  const handleSectionClick = (event, sectionId) => {
+    event.preventDefault();
+    navigateToHomeSection(sectionId, navigate, location.pathname === '/');
   };
 
   return (
@@ -20,7 +29,7 @@ const Footer = () => {
               Priyanshu<span className="text-gradient">.dev</span>
             </Link>
             <p className="footer-desc">
-              Software Developer at Brainstream Technolabs. Specialized in scalable web applications and e-commerce engineering.
+              Shopware, PHP, and e-commerce developer focused on reliable plugins, integrations, and storefront improvements.
             </p>
           </div>
           
@@ -29,8 +38,9 @@ const Footer = () => {
             <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/work">Professional Work</Link></li>
-              <li><a href="/#experience">Experience</a></li>
-              <li><a href="/#projects">Projects</a></li>
+              <li><a href="#experience" onClick={(event) => handleSectionClick(event, 'experience')}>Experience</a></li>
+              <li><a href="#shopware-experience" onClick={(event) => handleSectionClick(event, 'shopware-experience')}>Shopware</a></li>
+              <li><a href="#projects" onClick={(event) => handleSectionClick(event, 'projects')}>Projects</a></li>
             </ul>
           </div>
           
@@ -38,8 +48,8 @@ const Footer = () => {
             <h4>Resources</h4>
             <ul>
               <li><a href="https://github.com/Priyanshu6861" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
-              <li><a href="#">LinkedIn</a></li>
               <li><a href="mailto:priyanshujoshi2252@gmail.com">Contact Email</a></li>
+              <li><a href={`${import.meta.env.BASE_URL}files/Resume.pdf`} target="_blank" rel="noopener noreferrer">Resume PDF</a></li>
             </ul>
           </div>
         </div>
@@ -55,9 +65,6 @@ const Footer = () => {
             <a href="https://github.com/Priyanshu6861" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Github size={18} />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <Linkedin size={18} />
-            </a>
           </div>
           
           <button onClick={scrollToTop} className="scroll-top-btn" aria-label="Scroll to top">
@@ -70,4 +77,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

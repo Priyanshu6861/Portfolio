@@ -1,9 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Github, FileText, CheckCircle } from 'lucide-react';
+import { navigateToHomeSection } from '../utils/scrollToSection';
 import './Hero.css';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleSectionClick = (event, sectionId) => {
+    event.preventDefault();
+    navigateToHomeSection(sectionId, navigate, true);
+  };
+
   return (
     <section className="hero" id="home">
       <div className="container hero-container">
@@ -19,18 +28,24 @@ const Hero = () => {
           </div>
           
           <h1 className="hero-title">
-            Software Developer building <span className="text-gradient">scalable</span> and user-focused web applications
+            2+ Years Experience | Shopware Developer | PHP &amp; E-commerce Specialist
           </h1>
           
           <p className="hero-subtitle">
-            I'm Priyanshu Joshi, a Software Developer at Brainstream Technolabs. I specialize in engineering robust e-commerce solutions, building high-performance React applications, and solving complex architectural challenges through clean, efficient code.
+            I build Shopware 6 plugins, custom e-commerce modules, Odoo integrations, and API-driven workflows that help stores run faster and sell with fewer operational headaches.
           </p>
+
+          <div className="role-badges" aria-label="Professional roles">
+            <span>Shopware Developer</span>
+            <span>PHP Developer</span>
+            <span>E-commerce Specialist</span>
+          </div>
           
           <div className="hero-actions">
-            <a href="#projects" className="btn btn-primary">
+            <a href="#projects" className="btn btn-primary" onClick={(event) => handleSectionClick(event, 'projects')}>
               View Projects <ArrowRight size={20} />
             </a>
-            <a href="#contact" className="btn btn-outline">
+            <a href="#contact" className="btn btn-outline" onClick={(event) => handleSectionClick(event, 'contact')}>
               Contact Me
             </a>
           </div>
@@ -55,7 +70,11 @@ const Hero = () => {
             </div>
             <div className="stat-item">
               <CheckCircle size={20} className="text-gradient" />
-              <span>E-commerce Specialist</span>
+              <span>Shopware 6 Plugins</span>
+            </div>
+            <div className="stat-item">
+              <CheckCircle size={20} className="text-gradient" />
+              <span>Odoo & API Integrations</span>
             </div>
           </div>
         </motion.div>

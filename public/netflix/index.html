@@ -9,6 +9,141 @@
     <link href="assets/n.dabfdfab.png" rel="icon" type="image/x-icon" />
     <title>Netflix India – Watch TV Shows Online, Watch Movies Online</title>
   <link rel="stylesheet" href="assets/index.fb2feee8.css">
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      overflow-x: hidden;
+    }
+
+    body > .w-full.relative:first-of-type {
+      min-height: 720px;
+      background: #000;
+    }
+
+    body > .w-full.relative:first-of-type > img:first-child {
+      height: 720px;
+      object-fit: cover;
+      filter: brightness(0.45);
+    }
+
+    body > .w-full.relative:first-of-type > div:nth-of-type(1) {
+      top: 18px !important;
+      left: clamp(20px, 4vw, 56px) !important;
+    }
+
+    body > .w-full.relative:first-of-type > div:nth-of-type(2) {
+      top: 10px !important;
+      left: auto !important;
+      right: 148px !important;
+    }
+
+    body > .w-full.relative:first-of-type > div:nth-of-type(3) {
+      top: 40px !important;
+      left: auto !important;
+      right: 40px !important;
+    }
+
+    body > .w-full.relative:first-of-type > div:nth-of-type(4) {
+      top: 50% !important;
+      left: 50% !important;
+      width: min(920px, calc(100% - 32px)) !important;
+      height: auto !important;
+      transform: translate(-50%, -50%);
+    }
+
+    body > .w-full.relative:first-of-type h2 {
+      font-size: clamp(2.1rem, 6vw, 4rem) !important;
+      line-height: 1.08;
+    }
+
+    body > .w-full.relative:first-of-type h1 {
+      width: 100% !important;
+      font-size: clamp(1rem, 3vw, 1.85rem) !important;
+    }
+
+    body > .w-full.relative:first-of-type .flex,
+    .bg-black.flex.flex-col > .flex {
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    input[type="email"] {
+      width: min(420px, 100%) !important;
+      padding: 1rem !important;
+    }
+
+    .bg-black.flex {
+      align-items: center;
+      justify-content: center;
+      gap: clamp(24px, 5vw, 72px);
+      padding: clamp(48px, 8vw, 96px) clamp(20px, 6vw, 96px);
+      flex-wrap: wrap;
+    }
+
+    .bg-black.flex > div {
+      flex: 1 1 320px;
+      width: auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .bg-black.flex p {
+      width: 100% !important;
+      font-size: clamp(1.25rem, 4vw, 3rem) !important;
+      line-height: 1.18;
+    }
+
+    .bg-black.flex p + p {
+      margin-top: 1rem;
+      font-size: clamp(1rem, 2.5vw, 1.6rem) !important;
+    }
+
+    .bg-black.flex.flex-col {
+      padding: 56px 20px;
+    }
+
+    .bg-black.flex.flex-col > p {
+      width: 100% !important;
+      margin: 0 0 28px !important;
+      text-align: center;
+    }
+
+    .bg-black.flex.flex-col > div {
+      width: min(820px, 100%) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    @media (max-width: 640px) {
+      body > .w-full.relative:first-of-type {
+        min-height: 660px;
+      }
+
+      body > .w-full.relative:first-of-type > img:first-child {
+        height: 660px;
+      }
+
+      body > .w-full.relative:first-of-type > div:nth-of-type(1) {
+        width: 118px !important;
+      }
+
+      body > .w-full.relative:first-of-type > div:nth-of-type(2) {
+        display: none !important;
+      }
+
+      body > .w-full.relative:first-of-type > div:nth-of-type(3) {
+        top: 26px !important;
+        right: 20px !important;
+        width: auto !important;
+      }
+
+      body > .w-full.relative:first-of-type button {
+        white-space: nowrap;
+      }
+    }
+  </style>
 </head>
 
 <body>

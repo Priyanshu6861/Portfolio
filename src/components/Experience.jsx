@@ -6,16 +6,16 @@ import './Experience.css';
 const experiences = [
   {
     id: 1,
-    role: 'Software Developer',
+    role: 'Shopware & PHP Developer',
     company: 'Brainstream Technolabs Private Limited',
     period: 'March 2026 – Present',
-    description: 'Contributing to high-impact software products, specializing in both frontend and backend development. Focusing on API integrations, system performance optimization, and implementing scalable features for international e-commerce clients.',
+    description: 'Building e-commerce features and integration workflows for international clients, with a focus on Shopware, PHP, APIs, and reliable production delivery.',
     bullets: [
-      'Engineered and maintained core features using React and Node.js.',
-      'Optimized application performance, reducing load times by 40%.',
-      'Developed and integrated complex RESTful APIs for seamless data synchronization.',
+      'Developed Shopware-focused features, services, and admin workflows.',
+      'Implemented API integrations for data synchronization and business operations.',
+      'Improved performance and reliability across customer-facing e-commerce flows.',
       'Collaborated with cross-functional teams to deliver production-ready code on tight schedules.',
-      'Identified and resolved critical bugs in legacy systems, improving overall stability.'
+      'Resolved critical bugs in legacy systems, improving store stability.'
     ]
   },
   {
@@ -27,7 +27,7 @@ const experiences = [
   },
   {
     id: 3,
-    role: 'Backend & Co-Developer',
+    role: 'PHP Developer',
     company: 'Real Estate Broker System',
     period: 'Feb 2022 – March 2024',
     description: 'Developed custom real estate platform using Core PHP for property listings and broker-client communications.',
@@ -91,10 +91,11 @@ const Experience = () => {
               <h3>Why Hire Me?</h3>
             </div>
             <p>
-              I bring specialized technical expertise in Shopware 6 ecosystems combined with proven project delivery. I have successfully executed complex migrations (Magento 1 to Shopware 6), designed production-grade extensions, and built ERP integrations that solve real business problems.
+              I bring specialized Shopware 6 and PHP expertise combined with practical e-commerce delivery. I design production-grade extensions, build ERP integrations, and solve store operations problems with maintainable code.
             </p>
             <ul className="why-hire-list">
               <li>Master's degree in Computer Applications (MCA)</li>
+              <li>Shopware Developer, PHP Developer, and E-commerce Specialist</li>
               <li>Strong communicator and collaborative team player</li>
               <li>Dedicated to delivering high-quality solutions on time</li>
               <li>Expertise in performance optimization and reliability</li>

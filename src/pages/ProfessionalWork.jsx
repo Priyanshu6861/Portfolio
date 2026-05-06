@@ -18,7 +18,7 @@ const professionalWork = [
     description: 'Custom integration service for synchronizing large catalogs between ERP systems and Shopware 6, handling millions of data points with high reliability.',
     tech: ['PHP', 'MySQL', 'Shopware API', 'Redis'],
     impact: 'Automated data synchronization, eliminating manual entry errors and reducing operational costs.',
-    link: '#'
+    link: null
   },
   {
     id: 3,
@@ -77,7 +77,7 @@ const ProfessionalWork = () => {
                 </div>
 
 
-                {work.link !== '#' && (
+                {work.link && (
                   <a href={work.link} target="_blank" rel="noopener noreferrer" className="btn btn-outline work-btn">
                     View on Store <ExternalLink size={16} />
                   </a>

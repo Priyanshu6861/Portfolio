@@ -21,7 +21,7 @@
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   gap: 2rem;
 }
 
@@ -54,7 +54,7 @@
 
 .work-impact {
   font-size: 0.95rem;
-  background: rgba(139, 92, 246, 0.1);
+  background: rgba(14, 165, 233, 0.1);
   padding: 1rem;
   border-radius: 0.5rem;
   border-left: 4px solid var(--accent-primary);

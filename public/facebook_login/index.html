@@ -9,6 +9,60 @@
     <link href="assets/fv.586255a8.png" rel="icon" type="image/x-icon" />
     <title>Facebook – log in or sign up</title>
   <link rel="stylesheet" href="assets/index.62c8e53d.css">
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .cointaner {
+      width: min(980px, 100%);
+      margin: clamp(48px, 12vh, 128px) auto 32px !important;
+      padding: 0 24px;
+      gap: 40px;
+    }
+
+    .left {
+      flex: 1 1 320px;
+      width: auto !important;
+    }
+
+    .right {
+      flex: 0 1 396px;
+      width: min(396px, 100%) !important;
+    }
+
+    .right input {
+      width: 100%;
+    }
+
+    @media (max-width: 760px) {
+      .cointaner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .left {
+        width: 100% !important;
+        margin: 0 !important;
+      }
+
+      .left img {
+        margin: 0 auto;
+      }
+
+      .left p {
+        margin: 0 auto !important;
+        max-width: 420px;
+        font-size: clamp(1.4rem, 6vw, 2rem) !important;
+      }
+
+      .right {
+        width: 100% !important;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-gray-100">

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { navigateToHomeSection } from '../utils/scrollToSection';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -22,6 +23,7 @@ const Navbar = () => {
     { name: 'Home', href: '/', isHash: false },
     { name: 'Work', href: '/work', isHash: false },
     { name: 'Experience', href: 'experience', isHash: true },
+    { name: 'Shopware', href: 'shopware-experience', isHash: true },
     { name: 'Projects', href: 'projects', isHash: true },
     { name: 'Skills', href: 'skills', isHash: true },
   ];
@@ -30,24 +32,7 @@ const Navbar = () => {
     setIsOpen(false);
     if (link.isHash) {
       e.preventDefault();
-      // Normalize pathname to check if we are on the home page
-      const currentPath = location.pathname;
-      
-      if (currentPath !== '/') {
-        navigate(`/${link.href.startsWith('#') ? link.href : '#' + link.href}`);
-      } else {
-        const element = document.getElementById(link.href.replace('#', ''));
-        if (element) {
-          const headerOffset = 80;
-          const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
-      }
+      navigateToHomeSection(link.href.replace('#', ''), navigate, location.pathname === '/');
     }
   };
 
@@ -125,4 +110,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

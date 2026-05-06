@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { LayoutTemplate, Server, Database, Code, Wrench, Layers } from 'lucide-react';
+import { LayoutTemplate, Server, Database } from 'lucide-react';
 import './Skills.css';
 
 const skillCategories = [
@@ -19,10 +19,11 @@ const skillCategories = [
     title: 'Backend & Core',
     icon: <Server size={24} />,
     skills: [
-      { name: 'Node.js', level: 88 },
-      { name: 'Java', level: 85 },
-      { name: 'PHP / Shopware', level: 92 },
-      { name: 'REST APIs', level: 95 }
+      { name: 'PHP', level: 94 },
+      { name: 'Shopware 6', level: 92 },
+      { name: 'Symfony', level: 88 },
+      { name: 'REST APIs', level: 95 },
+      { name: 'Odoo Integration', level: 86 }
     ]
   },
   {

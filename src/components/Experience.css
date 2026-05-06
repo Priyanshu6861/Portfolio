@@ -48,7 +48,7 @@
 
 .timeline-content {
   padding: 2rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   transition: transform 0.3s ease;
 }
 
@@ -162,5 +162,27 @@
   
   .why-hire-me {
     position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .timeline {
+    padding-left: 1.2rem;
+  }
+
+  .timeline-dot {
+    left: -1.55rem;
+  }
+
+  .timeline-content {
+    padding: 1.4rem;
+  }
+
+  .timeline-content:hover {
+    transform: none;
+  }
+
+  .why-hire-me {
+    padding: 1.5rem;
   }
 }

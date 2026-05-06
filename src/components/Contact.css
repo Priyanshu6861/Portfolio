@@ -5,7 +5,7 @@
 
 .contact-container {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
   gap: 4rem;
   align-items: center;
 }
@@ -19,6 +19,7 @@
   color: var(--text-secondary);
   margin-bottom: 3rem;
   font-size: 1.1rem;
+  max-width: 620px;
 }
 
 .contact-methods {
@@ -52,6 +53,7 @@
 .contact-method span {
   color: var(--text-secondary);
   transition: color 0.3s ease;
+  overflow-wrap: anywhere;
 }
 
 .contact-method a:hover {
@@ -136,5 +138,15 @@
 @media (max-width: 480px) {
   .contact-form-wrapper {
     padding: 2rem 1.5rem;
+  }
+
+  .contact-method {
+    align-items: flex-start;
+  }
+
+  .contact-icon {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
   }
 }
