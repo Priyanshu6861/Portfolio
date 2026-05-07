@@ -25,7 +25,7 @@ const projectsData = [
     description: 'Commerce platform concept with catalog browsing, cart flow, customer journeys, and backend-driven product management.',
     tech: ['Python', 'Django', 'HTML', 'CSS', 'MySQL'],
     github: 'https://github.com/Priyanshu6861/E-Commerce_Django',
-    demo: 'https://github.com/Priyanshu6861/E-Commerce_Django',
+    demo: 'https://e-commerce-django-wjek.onrender.com/',
     featured: true
   },
   {
