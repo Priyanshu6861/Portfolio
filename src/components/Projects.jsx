@@ -36,7 +36,6 @@ const projectsData = [
     description: 'Core PHP property management platform for listings, inquiries, broker workflows, and admin-controlled data.',
     tech: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
     github: 'https://github.com/Priyanshu6861/Real-Estate-PHP',
-    demo: 'https://github.com/Priyanshu6861/Real-Estate-PHP',
     featured: true
   },
 
@@ -82,6 +81,39 @@ const projectsData = [
     tech: ['HTML', 'Tailwind CSS', 'Landing Page'],
     github: 'https://github.com/Priyanshu6861/Portfolio/tree/main/public/random',
     demo: `${import.meta.env.BASE_URL}random/index.html`,
+    featured: false
+  },
+  {
+    id: 8,
+    title: 'Product Variants Matrix Extension',
+    category: 'Shopware',
+    image: 'image/project/product-variants.png',
+    description: 'Custom Shopware 6 extension for managing product variants and their relationships.',
+    tech: ['Shopware 6', 'PHP', 'Symfony', 'Vue.js', 'APIs'],
+    github: 'https://github.com/Priyanshu6861/Product-Variants-Matrix-Extension',
+    demo: '',
+    featured: false
+  },
+  {
+    id: 9,
+    title: 'Store Locator Extension',
+    category: 'Shopware',
+    image: 'image/project/store-locator.png',
+    description: 'Shopware 6 extension for adding a comprehensive store locator feature, helping customers find the nearest physical locations.',
+    tech: ['Shopware 6', 'JavaScript', 'Google Maps API', 'UX'],
+    github: 'https://github.com/Priyanshu6861/StoreLocator',
+    demo: '',
+    featured: false
+  },
+  {
+    id: 10,
+    title: 'Tax Switcher Extension',
+    category: 'Shopware',
+    image: 'image/project/tax-switcher.png',
+    description: 'Shopware 6 extension for adding a comprehensive tax switching feature, allowing customers to view prices in different currencies.',
+    tech: ['Shopware 6', 'JavaScript', 'API Integration', 'UX'],
+    github: 'https://github.com/Priyanshu6861/TaxSwitcher-Extension',
+    demo: '',
     featured: false
   }
 ];
@@ -134,14 +166,26 @@ const Projects = () => {
                           <Github size={20} />
                         </a>
                       )}
-                      {project.demo.startsWith('http') || project.demo.endsWith('.html') ? (
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-icon-link" title="Live Demo">
-                          <ExternalLink size={20} />
-                        </a>
-                      ) : (
-                        <Link to={project.demo} className="project-icon-link" title="View Details">
-                          <ExternalLink size={20} />
-                        </Link>
+                      {project.demo && (
+                        project.demo.startsWith('http') || project.demo.endsWith('.html') ? (
+                          <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="project-icon-link"
+                            title="Live Demo"
+                          >
+                            <ExternalLink size={20} />
+                          </a>
+                        ) : (
+                          <Link
+                            to={project.demo}
+                            className="project-icon-link"
+                            title="View Details"
+                          >
+                            <ExternalLink size={20} />
+                          </Link>
+                        )
                       )}
                     </div>
                   </div>
@@ -169,14 +213,24 @@ const Projects = () => {
                           <Github size={16} /> GitHub
                         </a>
                       )}
-                      {project.demo.startsWith('http') || project.demo.endsWith('.html') ? (
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn-small btn-primary-small">
-                          <ExternalLink size={16} /> Live Demo
-                        </a>
-                      ) : (
-                        <Link to={project.demo} className="btn-small btn-primary-small">
-                          <ExternalLink size={16} /> Case Study
-                        </Link>
+                      {project.demo && (
+                        project.demo.startsWith('http') || project.demo.endsWith('.html') ? (
+                          <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-small btn-primary-small"
+                          >
+                            <ExternalLink size={16} /> Live Demo
+                          </a>
+                        ) : (
+                          <Link
+                            to={project.demo}
+                            className="btn-small btn-primary-small"
+                          >
+                            <ExternalLink size={16} /> Case Study
+                          </Link>
+                        )
                       )}
                   </div>
 

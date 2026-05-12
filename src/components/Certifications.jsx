@@ -13,6 +13,11 @@ const certifications = [
     title: 'Shopware Certified Backend Developer (Intermediate)',
     image: 'image/certifications/shopware-backend.png',
     focus: ['Plugin architecture', 'DAL and services', 'API integrations']
+  },
+  {
+    title: 'Shopware Certified App Developer',
+    image: 'image/certifications/shopware-app.png',
+    focus: ['App development', 'Plugin architecture', 'API integrations']
   }
 ];
 

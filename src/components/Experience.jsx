@@ -24,13 +24,6 @@ const experiences = [
     company: 'Dolphin Web Solutions',
     period: '2024 - 2026',
     description: 'Designed and published multiple custom Shopware 6 extensions. Developed the Product Question and FAQ extension live on the Shopware Store.',
-  },
-  {
-    id: 3,
-    role: 'PHP Developer',
-    company: 'Real Estate Broker System',
-    period: 'Feb 2022 – March 2024',
-    description: 'Developed custom real estate platform using Core PHP for property listings and broker-client communications.',
   }
 ];
 
