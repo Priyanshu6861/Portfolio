@@ -1,0 +1,41 @@
+.cursor-spotlight {
+  position: fixed;
+  left: var(--cursor-x, 50vw);
+  top: var(--cursor-y, 50vh);
+  width: 560px;
+  height: 560px;
+  z-index: 999;
+  pointer-events: none;
+  opacity: var(--cursor-active, 0);
+  background:
+    radial-gradient(circle at center, var(--cursor-core) 0 2px, transparent 3px),
+    radial-gradient(circle at center, transparent 0 13%, var(--cursor-ring) 13.5%, transparent 16%),
+    radial-gradient(
+      circle at center,
+      var(--cursor-spotlight),
+      var(--cursor-spotlight-secondary) 34%,
+      transparent 68%
+    );
+  border-radius: 50%;
+  filter: blur(0.2px);
+  mix-blend-mode: screen;
+  transform: translate3d(-50%, -50%, 0);
+  transition: opacity 0.22s ease;
+  will-change: left, top, opacity;
+}
+
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .cursor-spotlight {
+    display: block;
+  }
+
+  html[data-theme='light'] .cursor-spotlight {
+    mix-blend-mode: multiply;
+  }
+}
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .cursor-spotlight {
+    display: none;
+  }
+}

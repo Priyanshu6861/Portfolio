@@ -20,8 +20,8 @@
 
 .certification-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(245, 158, 11, 0.32);
-  background: rgba(255, 255, 255, 0.055);
+  border-color: var(--accent-warm-border);
+  background: var(--surface-hover);
 }
 
 .certification-image-wrap {
@@ -42,7 +42,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--surface-soft);
   margin-bottom: 1rem;
 }
 
@@ -59,7 +59,7 @@
 
 .certification-focus span {
   color: var(--text-secondary);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--surface-soft);
   border: 1px solid var(--glass-border);
   border-radius: 999px;
   font-size: 0.78rem;

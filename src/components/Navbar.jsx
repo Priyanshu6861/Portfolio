@@ -3,9 +3,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { navigateToHomeSection } from '../utils/scrollToSection';
+import ThemeToggle from './ThemeToggle';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ theme, onThemeToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -69,13 +70,19 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <a href="#contact" className="btn btn-primary" onClick={(e) => handleNavClick(e, { href: 'contact', isHash: true })}>Let's Talk</a>
+          <div className="desktop-actions">
+            <ThemeToggle theme={theme} onToggle={onThemeToggle} />
+            <a href="#contact" className="btn btn-primary" onClick={(e) => handleNavClick(e, { href: 'contact', isHash: true })}>Let's Talk</a>
+          </div>
         </nav>
 
         {/* Mobile Toggle */}
-        <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="nav-controls">
+          <ThemeToggle theme={theme} onToggle={onThemeToggle} />
+          <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)} aria-label={isOpen ? 'Close menu' : 'Open menu'}>
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav */}

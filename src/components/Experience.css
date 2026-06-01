@@ -22,7 +22,7 @@
   bottom: 0;
   left: 0;
   width: 2px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--timeline-line);
 }
 
 .timeline-item {
@@ -77,7 +77,7 @@
   gap: 0.5rem;
   font-size: 0.875rem;
   color: var(--text-secondary);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--surface-soft);
   padding: 0.25rem 0.75rem;
   border-radius: 2rem;
 }
@@ -149,7 +149,7 @@
 }
 
 .why-hire-list li::before {
-  content: '✓';
+  content: '\2713';
   position: absolute;
   left: 0;
   color: var(--accent-primary);

@@ -8,6 +8,16 @@
   padding: 1.5rem 0;
 }
 
+.navbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--bg-primary), transparent);
+  opacity: 0.72;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
 .navbar.scrolled {
   padding: 1rem 0;
   border-radius: 0;
@@ -16,7 +26,12 @@
   border-top: none;
 }
 
+.navbar.scrolled::before {
+  opacity: 0;
+}
+
 .nav-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,6 +48,12 @@
   display: flex;
   align-items: center;
   gap: 1.25rem;
+}
+
+.desktop-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
 }
 
 .nav-links {
@@ -64,13 +85,27 @@
 }
 
 
-.mobile-toggle {
+.nav-controls {
   display: none;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mobile-toggle {
   color: var(--text-primary);
   width: 44px;
   height: 44px;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+  background: var(--glass-bg-strong);
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.mobile-toggle:hover {
+  background: var(--surface-hover);
+  border-color: var(--accent-primary-border);
 }
 
 .mobile-nav {
@@ -107,6 +142,10 @@
 
   .desktop-nav {
     display: none;
+  }
+
+  .nav-controls {
+    display: flex;
   }
   
   .mobile-toggle {

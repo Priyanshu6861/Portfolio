@@ -5,12 +5,17 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import ProfessionalWork from './pages/ProfessionalWork';
 import ScrollToTop from './components/ScrollToTop';
+import CursorSpotlight from './components/CursorSpotlight';
+import { useTheme } from './hooks/useTheme';
 
 function App() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <div className="app">
+      <CursorSpotlight />
       <ScrollToTop />
-      <Navbar />
+      <Navbar theme={theme} onThemeToggle={toggleTheme} />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
