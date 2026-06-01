@@ -7,14 +7,28 @@
     <title>Priyanshu Joshi | Software Developer | React & Shopware Expert</title>
     <meta name="description" content="Portfolio of Priyanshu Joshi, a Software Developer at Brainstream Technolabs. Specializing in React, Node.js, and Shopware extensions." />
     <meta name="keywords" content="Priyanshu Joshi, Software Developer, React Developer, Shopware Expert, Brainstream Technolabs, Full Stack Developer" />
+    <script>
+      (function () {
+        try {
+          var storedTheme = localStorage.getItem('portfolio-theme');
+          var systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          var theme = storedTheme === 'light' || storedTheme === 'dark' ? storedTheme : systemTheme;
+          document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.style.colorScheme = theme;
+        } catch (error) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          document.documentElement.style.colorScheme = 'dark';
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/Portfolio/assets/index-DRQyLvev.js"></script>
-    <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-DGZ_NuWD.css">
+    <script type="module" crossorigin src="/Portfolio/assets/index-nzBU-jXA.js"></script>
+    <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-GKA5RuB4.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
 
